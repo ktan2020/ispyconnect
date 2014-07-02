@@ -1,0 +1,2235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddCameraComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cameraID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCameraCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCameraCommentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WhiteLabelAlive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clientId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WhiteLabelAliveResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConnection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnectionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestConnection2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopback" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnection2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopback" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnection3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopback" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IPv4" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnection4Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopback" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IPv4" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConnection5Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoteAddress">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoteAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoteAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopBack" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connect2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopBack" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComputerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connect3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopBack" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComputerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connect4Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TryLoopBack" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComputerName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IPv4" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Connect5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connect5Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ToEncrypt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingAlive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingAliveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingAliveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingAlive2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IPv4" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingAlive2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingAlive2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Disconnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisconnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DisconnectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserObjectID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ObjectTypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForceSyncResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSync2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Internal_IPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Internal_Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSync2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForceSync2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSync3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Internal_IPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Internal_Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectList" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IPv4" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSync3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForceSync3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NotifyOnConnect" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Newsletters" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="URLOverrides" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveSettingsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCamera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="categoryId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sourceIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="size" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCameraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCameraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrantAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReadOnly" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="RedirectOnLogin" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccessMask" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrantAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrantAccessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iSpyAccessId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReadOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccessMask" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAccessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAccess2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cfg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAccess2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAccess2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertBody" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAlertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertBody" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CameraID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAlertWithImageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlert2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertBody" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlert2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAlert2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImage2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertBody" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CameraID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImage2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAlertWithImage2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImage3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlertBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlertWithImage3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAlertWithImage3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SMSNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CameraID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFrameGrabResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrab2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CameraID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrab2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFrameGrab2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrab3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFrameGrab3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFrameGrab3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SMSNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CameraID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Port" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMMS2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SMSNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMMS2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMMS2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderServerResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderServerAdditional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cameras" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderServerAdditionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderServerAdditionalResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTweet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTweetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTweetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductLatestVersionGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGet2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGet2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductLatestVersionGet2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGet3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProductLatestVersionGet3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductLatestVersionGet3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Gift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="subTypeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendNotification" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GiftResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClaimCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClaimCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClaimCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiLicensePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numServers" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiLicensePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MultiLicensePriceResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoBitcoin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="amt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typename" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="subtypeid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoBitcoinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GoBitcoinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddCameraCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCameraComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCameraCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCameraCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="WhiteLabelAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:WhiteLabelAlive" />
+  </wsdl:message>
+  <wsdl:message name="WhiteLabelAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:WhiteLabelAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection2SoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection2" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection2SoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnection2Response" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection3SoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection3" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection3SoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnection3Response" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection4SoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection4" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection4SoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnection4Response" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection5SoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection5" />
+  </wsdl:message>
+  <wsdl:message name="TestConnection5SoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnection5Response" />
+  </wsdl:message>
+  <wsdl:message name="RemoteAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoteAddress" />
+  </wsdl:message>
+  <wsdl:message name="RemoteAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoteAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="ConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Connect2SoapIn">
+    <wsdl:part name="parameters" element="tns:Connect2" />
+  </wsdl:message>
+  <wsdl:message name="Connect2SoapOut">
+    <wsdl:part name="parameters" element="tns:Connect2Response" />
+  </wsdl:message>
+  <wsdl:message name="Connect3SoapIn">
+    <wsdl:part name="parameters" element="tns:Connect3" />
+  </wsdl:message>
+  <wsdl:message name="Connect3SoapOut">
+    <wsdl:part name="parameters" element="tns:Connect3Response" />
+  </wsdl:message>
+  <wsdl:message name="Connect4SoapIn">
+    <wsdl:part name="parameters" element="tns:Connect4" />
+  </wsdl:message>
+  <wsdl:message name="Connect4SoapOut">
+    <wsdl:part name="parameters" element="tns:Connect4Response" />
+  </wsdl:message>
+  <wsdl:message name="Connect5SoapIn">
+    <wsdl:part name="parameters" element="tns:Connect5" />
+  </wsdl:message>
+  <wsdl:message name="Connect5SoapOut">
+    <wsdl:part name="parameters" element="tns:Connect5Response" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:PingAlive" />
+  </wsdl:message>
+  <wsdl:message name="PingAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:PingAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingAlive2SoapIn">
+    <wsdl:part name="parameters" element="tns:PingAlive2" />
+  </wsdl:message>
+  <wsdl:message name="PingAlive2SoapOut">
+    <wsdl:part name="parameters" element="tns:PingAlive2Response" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapOut">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewContentSoapIn">
+    <wsdl:part name="parameters" element="tns:NewContent" />
+  </wsdl:message>
+  <wsdl:message name="NewContentSoapOut">
+    <wsdl:part name="parameters" element="tns:NewContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ForceSyncSoapIn">
+    <wsdl:part name="parameters" element="tns:ForceSync" />
+  </wsdl:message>
+  <wsdl:message name="ForceSyncSoapOut">
+    <wsdl:part name="parameters" element="tns:ForceSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="ForceSync2SoapIn">
+    <wsdl:part name="parameters" element="tns:ForceSync2" />
+  </wsdl:message>
+  <wsdl:message name="ForceSync2SoapOut">
+    <wsdl:part name="parameters" element="tns:ForceSync2Response" />
+  </wsdl:message>
+  <wsdl:message name="ForceSync3SoapIn">
+    <wsdl:part name="parameters" element="tns:ForceSync3" />
+  </wsdl:message>
+  <wsdl:message name="ForceSync3SoapOut">
+    <wsdl:part name="parameters" element="tns:ForceSync3Response" />
+  </wsdl:message>
+  <wsdl:message name="SaveSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSettings" />
+  </wsdl:message>
+  <wsdl:message name="SaveSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCameraSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCamera" />
+  </wsdl:message>
+  <wsdl:message name="AddCameraSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCameraResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrantAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:GrantAccess" />
+  </wsdl:message>
+  <wsdl:message name="GrantAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:GrantAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAccess" />
+  </wsdl:message>
+  <wsdl:message name="SetAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAccess2SoapIn">
+    <wsdl:part name="parameters" element="tns:SetAccess2" />
+  </wsdl:message>
+  <wsdl:message name="SetAccess2SoapOut">
+    <wsdl:part name="parameters" element="tns:SetAccess2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlert" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendContentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendContent" />
+  </wsdl:message>
+  <wsdl:message name="SendContentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImage" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAlert2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlert2" />
+  </wsdl:message>
+  <wsdl:message name="SendAlert2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlert2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImage2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImage2" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImage2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImage2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImage3SoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImage3" />
+  </wsdl:message>
+  <wsdl:message name="SendAlertWithImage3SoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlertWithImage3Response" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrabSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFrameGrab" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrabSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFrameGrabResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrab2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendFrameGrab2" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrab2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendFrameGrab2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrab3SoapIn">
+    <wsdl:part name="parameters" element="tns:SendFrameGrab3" />
+  </wsdl:message>
+  <wsdl:message name="SendFrameGrab3SoapOut">
+    <wsdl:part name="parameters" element="tns:SendFrameGrab3Response" />
+  </wsdl:message>
+  <wsdl:message name="SendMMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMMS" />
+  </wsdl:message>
+  <wsdl:message name="SendMMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMMS2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendMMS2" />
+  </wsdl:message>
+  <wsdl:message name="SendMMS2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendMMS2Response" />
+  </wsdl:message>
+  <wsdl:message name="OrderServerSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderServer" />
+  </wsdl:message>
+  <wsdl:message name="OrderServerSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderServerAdditionalSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderServerAdditional" />
+  </wsdl:message>
+  <wsdl:message name="OrderServerAdditionalSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderServerAdditionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTweetSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTweet" />
+  </wsdl:message>
+  <wsdl:message name="SendTweetSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTweetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGet" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGet2SoapIn">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGet2" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGet2SoapOut">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGet2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGet3SoapIn">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGet3" />
+  </wsdl:message>
+  <wsdl:message name="ProductLatestVersionGet3SoapOut">
+    <wsdl:part name="parameters" element="tns:ProductLatestVersionGet3Response" />
+  </wsdl:message>
+  <wsdl:message name="GiftSoapIn">
+    <wsdl:part name="parameters" element="tns:Gift" />
+  </wsdl:message>
+  <wsdl:message name="GiftSoapOut">
+    <wsdl:part name="parameters" element="tns:GiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClaimCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:ClaimCode" />
+  </wsdl:message>
+  <wsdl:message name="ClaimCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:ClaimCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiLicensePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:MultiLicensePrice" />
+  </wsdl:message>
+  <wsdl:message name="MultiLicensePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiLicensePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GoBitcoinSoapIn">
+    <wsdl:part name="parameters" element="tns:GoBitcoin" />
+  </wsdl:message>
+  <wsdl:message name="GoBitcoinSoapOut">
+    <wsdl:part name="parameters" element="tns:GoBitcoinResponse" />
+  </wsdl:message>
+  <wsdl:portType name="iSpySoap">
+    <wsdl:operation name="AddCameraComment">
+      <wsdl:input message="tns:AddCameraCommentSoapIn" />
+      <wsdl:output message="tns:AddCameraCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WhiteLabelAlive">
+      <wsdl:input message="tns:WhiteLabelAliveSoapIn" />
+      <wsdl:output message="tns:WhiteLabelAliveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <wsdl:input message="tns:TestConnectionSoapIn" />
+      <wsdl:output message="tns:TestConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection2">
+      <wsdl:input message="tns:TestConnection2SoapIn" />
+      <wsdl:output message="tns:TestConnection2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection3">
+      <wsdl:input message="tns:TestConnection3SoapIn" />
+      <wsdl:output message="tns:TestConnection3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection4">
+      <wsdl:input message="tns:TestConnection4SoapIn" />
+      <wsdl:output message="tns:TestConnection4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection5">
+      <wsdl:input message="tns:TestConnection5SoapIn" />
+      <wsdl:output message="tns:TestConnection5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteAddress">
+      <wsdl:input message="tns:RemoteAddressSoapIn" />
+      <wsdl:output message="tns:RemoteAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <wsdl:input message="tns:ConnectSoapIn" />
+      <wsdl:output message="tns:ConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect2">
+      <wsdl:input message="tns:Connect2SoapIn" />
+      <wsdl:output message="tns:Connect2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect3">
+      <wsdl:input message="tns:Connect3SoapIn" />
+      <wsdl:output message="tns:Connect3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect4">
+      <wsdl:input message="tns:Connect4SoapIn" />
+      <wsdl:output message="tns:Connect4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect5">
+      <wsdl:input message="tns:Connect5SoapIn" />
+      <wsdl:output message="tns:Connect5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptSoapIn" />
+      <wsdl:output message="tns:EncryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive">
+      <wsdl:input message="tns:PingAliveSoapIn" />
+      <wsdl:output message="tns:PingAliveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive2">
+      <wsdl:input message="tns:PingAlive2SoapIn" />
+      <wsdl:output message="tns:PingAlive2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input message="tns:DisconnectSoapIn" />
+      <wsdl:output message="tns:DisconnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewContent">
+      <wsdl:input message="tns:NewContentSoapIn" />
+      <wsdl:output message="tns:NewContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync">
+      <wsdl:input message="tns:ForceSyncSoapIn" />
+      <wsdl:output message="tns:ForceSyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync2">
+      <wsdl:input message="tns:ForceSync2SoapIn" />
+      <wsdl:output message="tns:ForceSync2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync3">
+      <wsdl:input message="tns:ForceSync3SoapIn" />
+      <wsdl:output message="tns:ForceSync3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSettings">
+      <wsdl:input message="tns:SaveSettingsSoapIn" />
+      <wsdl:output message="tns:SaveSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCamera">
+      <wsdl:input message="tns:AddCameraSoapIn" />
+      <wsdl:output message="tns:AddCameraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrantAccess">
+      <wsdl:input message="tns:GrantAccessSoapIn" />
+      <wsdl:output message="tns:GrantAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess">
+      <wsdl:input message="tns:SetAccessSoapIn" />
+      <wsdl:output message="tns:SetAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess2">
+      <wsdl:input message="tns:SetAccess2SoapIn" />
+      <wsdl:output message="tns:SetAccess2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert">
+      <wsdl:input message="tns:SendAlertSoapIn" />
+      <wsdl:output message="tns:SendAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendContent">
+      <wsdl:input message="tns:SendContentSoapIn" />
+      <wsdl:output message="tns:SendContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage">
+      <wsdl:input message="tns:SendAlertWithImageSoapIn" />
+      <wsdl:output message="tns:SendAlertWithImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert2">
+      <wsdl:input message="tns:SendAlert2SoapIn" />
+      <wsdl:output message="tns:SendAlert2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage2">
+      <wsdl:input message="tns:SendAlertWithImage2SoapIn" />
+      <wsdl:output message="tns:SendAlertWithImage2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage3">
+      <wsdl:input message="tns:SendAlertWithImage3SoapIn" />
+      <wsdl:output message="tns:SendAlertWithImage3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab">
+      <wsdl:input message="tns:SendFrameGrabSoapIn" />
+      <wsdl:output message="tns:SendFrameGrabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab2">
+      <wsdl:input message="tns:SendFrameGrab2SoapIn" />
+      <wsdl:output message="tns:SendFrameGrab2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab3">
+      <wsdl:input message="tns:SendFrameGrab3SoapIn" />
+      <wsdl:output message="tns:SendFrameGrab3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS">
+      <wsdl:input message="tns:SendMMSSoapIn" />
+      <wsdl:output message="tns:SendMMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS2">
+      <wsdl:input message="tns:SendMMS2SoapIn" />
+      <wsdl:output message="tns:SendMMS2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderServer">
+      <wsdl:input message="tns:OrderServerSoapIn" />
+      <wsdl:output message="tns:OrderServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderServerAdditional">
+      <wsdl:input message="tns:OrderServerAdditionalSoapIn" />
+      <wsdl:output message="tns:OrderServerAdditionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTweet">
+      <wsdl:input message="tns:SendTweetSoapIn" />
+      <wsdl:output message="tns:SendTweetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet">
+      <wsdl:input message="tns:ProductLatestVersionGetSoapIn" />
+      <wsdl:output message="tns:ProductLatestVersionGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet2">
+      <wsdl:input message="tns:ProductLatestVersionGet2SoapIn" />
+      <wsdl:output message="tns:ProductLatestVersionGet2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet3">
+      <wsdl:input message="tns:ProductLatestVersionGet3SoapIn" />
+      <wsdl:output message="tns:ProductLatestVersionGet3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Gift">
+      <wsdl:input message="tns:GiftSoapIn" />
+      <wsdl:output message="tns:GiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClaimCode">
+      <wsdl:input message="tns:ClaimCodeSoapIn" />
+      <wsdl:output message="tns:ClaimCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiLicensePrice">
+      <wsdl:input message="tns:MultiLicensePriceSoapIn" />
+      <wsdl:output message="tns:MultiLicensePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GoBitcoin">
+      <wsdl:input message="tns:GoBitcoinSoapIn" />
+      <wsdl:output message="tns:GoBitcoinSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="iSpySoap" type="tns:iSpySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCameraComment">
+      <soap:operation soapAction="http://tempuri.org/AddCameraComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WhiteLabelAlive">
+      <soap:operation soapAction="http://tempuri.org/WhiteLabelAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection2">
+      <soap:operation soapAction="http://tempuri.org/TestConnection2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection3">
+      <soap:operation soapAction="http://tempuri.org/TestConnection3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection4">
+      <soap:operation soapAction="http://tempuri.org/TestConnection4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection5">
+      <soap:operation soapAction="http://tempuri.org/TestConnection5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteAddress">
+      <soap:operation soapAction="http://tempuri.org/RemoteAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <soap:operation soapAction="http://tempuri.org/Connect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect2">
+      <soap:operation soapAction="http://tempuri.org/Connect2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect3">
+      <soap:operation soapAction="http://tempuri.org/Connect3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect4">
+      <soap:operation soapAction="http://tempuri.org/Connect4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect5">
+      <soap:operation soapAction="http://tempuri.org/Connect5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive">
+      <soap:operation soapAction="http://tempuri.org/PingAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive2">
+      <soap:operation soapAction="http://tempuri.org/PingAlive2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap:operation soapAction="http://tempuri.org/Disconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewContent">
+      <soap:operation soapAction="http://tempuri.org/NewContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync">
+      <soap:operation soapAction="http://tempuri.org/ForceSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync2">
+      <soap:operation soapAction="http://tempuri.org/ForceSync2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync3">
+      <soap:operation soapAction="http://tempuri.org/ForceSync3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSettings">
+      <soap:operation soapAction="http://tempuri.org/SaveSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCamera">
+      <soap:operation soapAction="http://tempuri.org/AddCamera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrantAccess">
+      <soap:operation soapAction="http://tempuri.org/GrantAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess">
+      <soap:operation soapAction="http://tempuri.org/SetAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess2">
+      <soap:operation soapAction="http://tempuri.org/SetAccess2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert">
+      <soap:operation soapAction="http://tempuri.org/SendAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendContent">
+      <soap:operation soapAction="http://tempuri.org/SendContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage">
+      <soap:operation soapAction="http://tempuri.org/SendAlertWithImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert2">
+      <soap:operation soapAction="http://tempuri.org/SendAlert2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage2">
+      <soap:operation soapAction="http://tempuri.org/SendAlertWithImage2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage3">
+      <soap:operation soapAction="http://tempuri.org/SendAlertWithImage3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab">
+      <soap:operation soapAction="http://tempuri.org/SendFrameGrab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab2">
+      <soap:operation soapAction="http://tempuri.org/SendFrameGrab2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab3">
+      <soap:operation soapAction="http://tempuri.org/SendFrameGrab3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS">
+      <soap:operation soapAction="http://tempuri.org/SendMMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS2">
+      <soap:operation soapAction="http://tempuri.org/SendMMS2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderServer">
+      <soap:operation soapAction="http://tempuri.org/OrderServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderServerAdditional">
+      <soap:operation soapAction="http://tempuri.org/OrderServerAdditional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTweet">
+      <soap:operation soapAction="http://tempuri.org/SendTweet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet">
+      <soap:operation soapAction="http://tempuri.org/ProductLatestVersionGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet2">
+      <soap:operation soapAction="http://tempuri.org/ProductLatestVersionGet2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet3">
+      <soap:operation soapAction="http://tempuri.org/ProductLatestVersionGet3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gift">
+      <soap:operation soapAction="http://tempuri.org/Gift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClaimCode">
+      <soap:operation soapAction="http://tempuri.org/ClaimCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiLicensePrice">
+      <soap:operation soapAction="http://tempuri.org/MultiLicensePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoBitcoin">
+      <soap:operation soapAction="http://tempuri.org/GoBitcoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="iSpySoap12" type="tns:iSpySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCameraComment">
+      <soap12:operation soapAction="http://tempuri.org/AddCameraComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WhiteLabelAlive">
+      <soap12:operation soapAction="http://tempuri.org/WhiteLabelAlive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection2">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection3">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection4">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection5">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteAddress">
+      <soap12:operation soapAction="http://tempuri.org/RemoteAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://tempuri.org/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect2">
+      <soap12:operation soapAction="http://tempuri.org/Connect2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect3">
+      <soap12:operation soapAction="http://tempuri.org/Connect3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect4">
+      <soap12:operation soapAction="http://tempuri.org/Connect4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect5">
+      <soap12:operation soapAction="http://tempuri.org/Connect5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive">
+      <soap12:operation soapAction="http://tempuri.org/PingAlive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingAlive2">
+      <soap12:operation soapAction="http://tempuri.org/PingAlive2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://tempuri.org/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewContent">
+      <soap12:operation soapAction="http://tempuri.org/NewContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync">
+      <soap12:operation soapAction="http://tempuri.org/ForceSync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync2">
+      <soap12:operation soapAction="http://tempuri.org/ForceSync2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSync3">
+      <soap12:operation soapAction="http://tempuri.org/ForceSync3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSettings">
+      <soap12:operation soapAction="http://tempuri.org/SaveSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCamera">
+      <soap12:operation soapAction="http://tempuri.org/AddCamera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrantAccess">
+      <soap12:operation soapAction="http://tempuri.org/GrantAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess">
+      <soap12:operation soapAction="http://tempuri.org/SetAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAccess2">
+      <soap12:operation soapAction="http://tempuri.org/SetAccess2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert">
+      <soap12:operation soapAction="http://tempuri.org/SendAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendContent">
+      <soap12:operation soapAction="http://tempuri.org/SendContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage">
+      <soap12:operation soapAction="http://tempuri.org/SendAlertWithImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlert2">
+      <soap12:operation soapAction="http://tempuri.org/SendAlert2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage2">
+      <soap12:operation soapAction="http://tempuri.org/SendAlertWithImage2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlertWithImage3">
+      <soap12:operation soapAction="http://tempuri.org/SendAlertWithImage3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab">
+      <soap12:operation soapAction="http://tempuri.org/SendFrameGrab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab2">
+      <soap12:operation soapAction="http://tempuri.org/SendFrameGrab2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFrameGrab3">
+      <soap12:operation soapAction="http://tempuri.org/SendFrameGrab3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS">
+      <soap12:operation soapAction="http://tempuri.org/SendMMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMMS2">
+      <soap12:operation soapAction="http://tempuri.org/SendMMS2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderServer">
+      <soap12:operation soapAction="http://tempuri.org/OrderServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderServerAdditional">
+      <soap12:operation soapAction="http://tempuri.org/OrderServerAdditional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTweet">
+      <soap12:operation soapAction="http://tempuri.org/SendTweet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet">
+      <soap12:operation soapAction="http://tempuri.org/ProductLatestVersionGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet2">
+      <soap12:operation soapAction="http://tempuri.org/ProductLatestVersionGet2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLatestVersionGet3">
+      <soap12:operation soapAction="http://tempuri.org/ProductLatestVersionGet3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gift">
+      <soap12:operation soapAction="http://tempuri.org/Gift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClaimCode">
+      <soap12:operation soapAction="http://tempuri.org/ClaimCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiLicensePrice">
+      <soap12:operation soapAction="http://tempuri.org/MultiLicensePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoBitcoin">
+      <soap12:operation soapAction="http://tempuri.org/GoBitcoin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="iSpy">
+    <wsdl:port name="iSpySoap" binding="tns:iSpySoap">
+      <soap:address location="http://www.ispyconnect.com/Webservices/iSpy.asmx" />
+    </wsdl:port>
+    <wsdl:port name="iSpySoap12" binding="tns:iSpySoap12">
+      <soap12:address location="http://www.ispyconnect.com/Webservices/iSpy.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
